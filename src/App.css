@@ -5,12 +5,12 @@
 
 .leftside{
   width: 20%;
+  border-right:  1px solid black;
 }
 
 
 .rightside{
   width: 80%;
-  border-left:  1px solid black;
 }
 
 
