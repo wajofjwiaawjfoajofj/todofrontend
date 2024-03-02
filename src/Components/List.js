@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { GetTodos } from '../api';
+import GetTodos from '../API/api';
 
 const List = () => {
 
