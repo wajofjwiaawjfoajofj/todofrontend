@@ -1,0 +1,34 @@
+.wrapper{
+  width: 100%;
+  display: flex;
+}
+
+.leftside{
+  width: 20%;
+}
+
+
+.rightside{
+  width: 80%;
+  border-left:  1px solid black;
+}
+
+
+@media screen and (max-width:768px){
+  .wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  .leftside{
+    width: 100%;
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+  }
+  
+  
+  .rightside{
+    width: 100%;
+  }
+  
+}
