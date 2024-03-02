@@ -1,10 +1,8 @@
-# Getting Started with Create React App
+# 学生エンジニア向けのTodoアプリのフロントエンド側
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 使用技術
 
-## Available Scripts
-
-In the project directory, you can run:
+React.js
 
 ### `npm start`
 
