@@ -15,5 +15,20 @@ const URL_API = 'http://localhost:3000';
         throw error;
     }
 }
-
 export default GetTodos;
+
+
+//Todoの作成
+export const Create = async (todoData) => {
+    try{
+        const res = await axios.post(`${URL_API}/todos`, todoData)
+        return res.data;
+    }
+    catch(error)
+    {
+        console.log('エラーが発生しました' ,error)
+        throw error;
+    }
+}
+
+
