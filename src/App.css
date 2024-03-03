@@ -5,13 +5,23 @@
 
 .leftside{
   width: 25%;
-  border-right:  1px solid black;
+  border-right:  0.7px solid black;
   height: 100vh;
 }
 
 
 .rightside{
   width: 75%;
+}
+
+
+@media screen and (min-width:768px) and (max-width:1080px){
+  .leftside{
+    width: 30%;
+  }
+  .rightside{
+    width: 70%;
+  }
 }
 
 

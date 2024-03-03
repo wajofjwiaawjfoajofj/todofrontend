@@ -73,7 +73,7 @@ const Form = () => {
             />
           </div>
           <div>
-            <Button type='submit'>Todoを追加する</Button>
+            <Button type='submit' variant='contained'>Todoを追加する</Button>
           </div>
         </div>
       </form>
