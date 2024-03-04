@@ -1,3 +1,9 @@
+.TopBar{
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+
 .wrapper{
   width: 100%;
   display: flex;
@@ -35,9 +41,10 @@
   }
   .leftside{
     width: 100%;
-    border-bottom: 1px solid black;
+    border-right: none;
+    border-bottom: 0.1px solid black;
     padding-bottom: 30px;
-    height: 40px;
+    height: 120px;
   }
   
   

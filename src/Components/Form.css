@@ -1,0 +1,55 @@
+
+form{
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.wrraper{
+    width: 70%;
+}
+
+@media screen and (min-width:768px){
+   .wrraper{
+    margin-left: 100px;
+   }
+}
+
+.taskwrappr{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.selectwrapper{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.select{
+    width: 70%;
+    height: 40px
+}
+
+.datewrapper{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.date{
+    width: 70%;
+}
+
+.buttonwrapper{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 60px;
+}
+
+/* sp用のcss */
+
+
+

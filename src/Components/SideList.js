@@ -12,15 +12,15 @@ const SideList = () => {
     <ul className='sideBarwrapper'>
      <li className='linkList'>
      <AddIcon className='muiIcon'  />
-     <Link to="/" className='Link'>タスクの追加</Link>
+     <Link to="/" className='Link'>Add a Task</Link>
      </li>
      <li className='linkList'>
      <FormatListBulletedIcon className='muiIcon' /> 
-     <Link to="/list" className='Link'>実行中のtodo</Link>
+     <Link to="/list" className='Link'>onGoing...</Link>
      </li>
      <li className='linkList'>
      <LibraryAddCheckIcon  className='muiIcon' />
-     <Link to="/complete" className='Link'>完了済みのTodo</Link>
+     <Link to="/complete" className='Link'>Complete</Link>
      </li>
      <li className='linkList'>
      <InfoIcon  className='muiIcon' />

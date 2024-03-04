@@ -4,6 +4,7 @@ import Complete from './Components/Complete';
 import Form from './Components/Form';
 import List from './Components/List';
 import SideList from './Components/SideList';
+import TopBar from './Components/TopBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
@@ -12,6 +13,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <>
+    <TopBar className="TopBar"/>
     <Router>
     <div className="wrapper">
     <div className='leftside'> 
