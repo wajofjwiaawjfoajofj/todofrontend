@@ -1,0 +1,31 @@
+.Listmain{
+    display: flex;
+    align-items: center;
+    height: 50vh;
+    max-height: 4000px;
+    margin-left: 100px;
+}
+
+
+
+
+.inner{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* sp用のcss */
+@media screen and (max-width:768px){
+    .Listmain{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+    .Listwrapper{
+        width: 80%;
+    }
+
+} 
