@@ -26,9 +26,36 @@ export const Create = async (todoData) => {
     }
     catch(error)
     {
-        console.log('エラーが発生しました' ,error)
+        console.log('エラーが発生しました' ,error);
         throw error;
     }
+}
+
+//Todoの削除用API
+export const Delete = async (todoId) => {
+    try{
+    const res = await axios.delete(`${URL_API}/todos/${todoId}`)
+    return res.data;
+    }
+    catch(error)
+    {
+        console.log('エラーが発生しました' ,error);
+        throw error;
+    }
+}
+
+
+//TodoのコンプリートAPI
+export const Complete = async (todoId) => {
+    try{
+        const res = await axios.post(`${URL_API}/todos/${todoId}`)
+        return res.data;
+        }
+        catch(error)
+        {
+            console.log('エラーが発生しました' ,error);
+            throw error;
+        }
 }
 
 
