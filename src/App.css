@@ -4,6 +4,7 @@
 }
 
 
+
 .wrapper{
   width: 100%;
   display: flex;
@@ -42,8 +43,7 @@
   .leftside{
     width: 100%;
     border-right: none;
-    border-bottom: 0.1px solid black;
-    padding-bottom: 30px;
+    padding-top: 30px;
     height: 120px;
   }
   

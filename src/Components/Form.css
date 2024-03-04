@@ -4,7 +4,7 @@ form{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 90vh;
 }
 
 
@@ -50,6 +50,30 @@ form{
 }
 
 /* sp用のcss */
+@media screen and (max-width:768px){
 
+    form{
+        width: 100%;
+        height: 80vh;
+    }
 
+   .wrraper{
+    display: flex;
+    flex-direction: column;
+   }
+   .select{
+    width: 100%;
+   }
+   .date{
+    width: 100%;
+   }
+
+   .buttonwrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+ }
+
+}
 

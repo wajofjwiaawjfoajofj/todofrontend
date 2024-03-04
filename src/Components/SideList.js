@@ -12,7 +12,7 @@ const SideList = () => {
     <ul className='sideBarwrapper'>
      <li className='linkList'>
      <AddIcon className='muiIcon'  />
-     <Link to="/" className='Link'>Add a Task</Link>
+     <Link to="/" className='Link'>Add My Tasks</Link>
      </li>
      <li className='linkList'>
      <FormatListBulletedIcon className='muiIcon' /> 

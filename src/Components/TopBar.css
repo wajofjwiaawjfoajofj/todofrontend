@@ -6,6 +6,18 @@
     border-bottom: 0.5px solid black;
 }
 
+
+@media screen and (max-width:768px){
+    .TopBarwrraper{
+      position: fixed;
+      top: 0;
+      z-index: 999;
+      left: 0;
+      border-bottom: none;
+    }
+  }
+
 .topbar{
     font-size: 20px;
+    font-weight: 600;
 }
