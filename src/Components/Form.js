@@ -65,6 +65,13 @@ const Form = () => {
             <MenuItem value='paiza'>paiza</MenuItem>
             <MenuItem value='udemy'>Udemy</MenuItem>
             <MenuItem value='study'>参考書</MenuItem>
+            <MenuItem value='qualification'>資格</MenuItem>
+            <MenuItem value='codetest'>コーディングテスト</MenuItem>
+            <MenuItem value='job'>インターン、バイト</MenuItem>
+            <MenuItem value='youtube'>Youtube</MenuItem>
+            <MenuItem value='dev'>個人開発</MenuItem>
+            <MenuItem value='newqrd'>就活</MenuItem>
+            <MenuItem value='other'>その他</MenuItem>
           </Select>
           </div>
           <div className='datewrapper'>
