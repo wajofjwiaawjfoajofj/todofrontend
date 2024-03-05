@@ -19,19 +19,6 @@
 //     //     TodoList();
 //     // },[])
 
-//     useEffect(() => {
-//         const TodoList = async () => {
-//             try{
-//              const getFromAPI = await TodoListDummy();
-//              console.log(getFromAPI)
-//              setTodos(getFromAPI);
-//               }
-//             catch(error){
-//           console.log('エラーが発生しました', error)
-//          }
-//         }
-//         TodoList();
-//     },[])
 
 
 
@@ -69,6 +56,8 @@ import { TodoListDummy2 } from '../Dummy/dummy';
 import Listcollection from './Listcollection';
 import './List.css';
 
+
+
 const List = () => {
 
     //ダミーデータ
@@ -76,7 +65,7 @@ const List = () => {
     const [todos2, setTodo2] = useState([]);
 
 
-
+    //表示用
     useEffect(() => {
         setTodos([TodoListDummy]);
     }, []);
@@ -86,12 +75,20 @@ const List = () => {
     }, []);
 
 
-
+    //削除
+    const handleDelete = async(todoId) => {
+        try{
+        setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
+        }
+        catch(error){
+         console.log(error)
+        }
+    }
 
     return (
         <div className='Listmain'>
             <div className='Listwrapper'>
-            <Listcollection  todos={todos} todos2={todos2} /> 
+            <Listcollection  todos={todos} todos2={todos2} onTodoDelete={handleDelete} /> 
             </div>
         </div>
     );
