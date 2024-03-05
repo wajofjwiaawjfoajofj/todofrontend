@@ -14,17 +14,17 @@ const Listcollection = ({ todos,todos2, onTodoDelete, onTodoComplete }) => {
       <div>
         <h2>Udemy</h2>
         <ul>
-          {todos.map((todo) =>
-            todo.type === 'udemy' ? (
-              <ListcollectionItems
-                key={todo.id} 
-                todo={todo} 
-                onDelete={handleDelete}
-                onComplete={handleComplete}
-              />
-            ) : null
-          )}
-        </ul>
+     {todos.map((todo) =>
+       todo.type === 'udemy' ? (
+      <ListcollectionItems
+        key={todo.id} 
+        todo={todo} 
+        onDelete={handleDelete}
+        onComplete={handleComplete}
+      />
+    ) : null
+  )}
+</ul>
         <h2>Paiza</h2>
         <ul>
           {todos2.map((todo) =>

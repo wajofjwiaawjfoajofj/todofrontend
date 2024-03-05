@@ -58,4 +58,16 @@ export const Complete = async (todoId) => {
         }
 }
 
+//Todoのコンプリートを入手するAPI
+export const getComplete = async (todoId) => {
+    try{
+        const res = await axios.get(`${URL_API}/todos/${todoId}`)
+        return res.data;
+    }
+    catch(error)
+        {
+            console.log('エラーが発生しました' ,error);
+            throw error;
+        }
+}
 

@@ -67,7 +67,7 @@ const List = () => {
 
     //表示用
     useEffect(() => {
-        setTodos([TodoListDummy]);
+        setTodos([...TodoListDummy]);
     }, []);
 
     useEffect(() => {
