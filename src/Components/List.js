@@ -85,10 +85,20 @@ const List = () => {
         }
     }
 
+   //コンプリート
+   const handleComplete = async (todoId) => {
+    try{
+        setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
+        }
+        catch(error){
+         console.log(error)
+        }
+   }
+
     return (
         <div className='Listmain'>
             <div className='Listwrapper'>
-            <Listcollection  todos={todos} todos2={todos2} onTodoDelete={handleDelete} /> 
+            <Listcollection  todos={todos}  todos2={todos2} onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
             </div>
         </div>
     );

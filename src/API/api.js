@@ -58,7 +58,4 @@ export const Complete = async (todoId) => {
         }
 }
 
-//Todo編集用のAPI
 
-
-//Todoコンプリートを取得用のAPI
