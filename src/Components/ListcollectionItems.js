@@ -18,6 +18,8 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
     const handleCompleteClick = async () => {
         try{
             await Complete(todo.id);
+            //完了したTodoを削除
+            await Delete(todo.id);
             onComplete(todo.id);
         }
         catch(error){

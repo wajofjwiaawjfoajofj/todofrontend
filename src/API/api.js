@@ -46,9 +46,9 @@ export const Delete = async (todoId) => {
 
 
 //TodoのコンプリートAPI
-export const Complete = async (todoId) => {
+export const Complete = async (todoId,todoData) => {
     try{
-        const res = await axios.post(`${URL_API}/todos/${todoId}`)
+        const res = await axios.post(`${URL_API}/todos/${todoId}` , todoData)
         return res.data;
         }
         catch(error)

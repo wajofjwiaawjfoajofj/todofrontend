@@ -24,10 +24,8 @@ const Complete =  () => {
   // },[])
 
   useEffect(() => {
-    setCompletes([CompleteDummy])
+    setCompletes([...CompleteDummy])
   },[])
-
-
 
 
   return (

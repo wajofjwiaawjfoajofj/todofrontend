@@ -2,15 +2,15 @@ const TodoListDummy = [
 {
     title: '今後のフロントエンド開発で必須となるReact v18の機能を丁寧に解説する',
     type: 'udemy' ,
-    date: '6'   
+    date: 6   
 },{
     title: 'Rubyマスターコース',
     type: 'udemy' ,
-    date: '12'   
+    date: 28   
 },{
     title: 'javascriptマスターコース',
     type: 'udemy' ,
-    date: '15'   
+    date: 12  
 }
 ]
 
@@ -26,10 +26,15 @@ export const TodoListDummy2 = {
 
 
 
-export const CompleteDummy = {
+export const CompleteDummy = [{
     title: "関口paizaAランク",
     type: 'paiza',
     date: -1
+},{
+    title: "React本格入門読み切る",
+    type: 'study',
+    date: 7
 }
+]
 
 

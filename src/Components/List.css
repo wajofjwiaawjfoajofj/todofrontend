@@ -1,9 +1,10 @@
 .Listmain{
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     max-height: 4000px;
-    margin-left: 100px;
+    margin-right: 100px;
 }
 
 

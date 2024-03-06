@@ -9,6 +9,9 @@ const Listcollection = ({ todos,todos2, onTodoDelete, onTodoComplete }) => {
     const handleComplete = (todoId) => {
       onTodoComplete(todoId);
     };
+
+    //ソートを使って残り日数順に並べる
+    todos.sort((m,n) => m.date -  n.date)
   
     return (
       <div>
