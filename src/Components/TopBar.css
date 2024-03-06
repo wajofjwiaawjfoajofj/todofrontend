@@ -7,7 +7,7 @@
 }
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:765px){
     .TopBarwrraper{
       position: fixed;
       top: 0;

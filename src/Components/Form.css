@@ -13,7 +13,7 @@ form{
     padding: 40px;
 }
 
-@media screen and (min-width:768px){
+@media screen and (min-width:766px){
    .wrraper{
     margin-left: 100px;
    }
@@ -52,7 +52,7 @@ form{
 }
 
 /* sp用のcss */
-@media screen and (max-width:768px){
+@media screen and (max-width:765px){
 
     form{
         width: 100%;

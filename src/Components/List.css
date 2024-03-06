@@ -17,7 +17,7 @@
 }
 
 /* sp用のcss */
-@media screen and (max-width:768px){
+@media screen and (max-width:765px){
     .Listmain{
         display: flex;
         align-items: center;
