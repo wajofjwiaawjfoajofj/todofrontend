@@ -7,12 +7,13 @@ import './Form.css';
 const Form = () => {
   const [title, setTitle] = useState('');
   const [type, setType] = useState('');
-  const [day, setDay] = useState('');
+  const [day, setDay] = useState(new Date());
 
   //usenavigateをインスタンス化
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+    console.log(title, type, day,new Date());
     e.preventDefault();
     try {
       Create({
@@ -22,11 +23,10 @@ const Form = () => {
         created: new Date()
       });
 
-      console.log(title, type, day);
 
       setTitle('');
       setType('');
-      setDay('');
+      setDay(new Date());
     } catch (error) {
       console.log(error);
     }
@@ -79,8 +79,10 @@ const Form = () => {
             <Input
               id='date'
               type='date'
-              value={day}
-              onChange={(e) => setDay(e.target.value)}
+              //dateオブジェクトをISO文字列に変換して、日付部分のみ取得
+              value={day.toISOString().split('T')[0]}
+              //日付に変更があった場合、Dateオブジェクトに変換して保存
+              onChange={(e) => setDay(new Date(e.target.value))}
               required
               className='date'
             />
