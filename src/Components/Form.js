@@ -86,7 +86,7 @@ const Form = () => {
               required
               className='date'
             />
-          </div>
+          </div> */}
           <div className='buttonwrapper'>
             <Button 
               type='submit' 
@@ -96,7 +96,7 @@ const Form = () => {
               >
                Todoを追加する
              </Button>
-          </div> */}
+          </div>
         </div>
       </form>
     </>
