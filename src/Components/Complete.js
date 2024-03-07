@@ -10,6 +10,7 @@ const Complete =  () => {
   //一旦ダミーデータ使う
 
   const  [completes, setCompletes] = useState([])
+  
 
   // useEffect(() => {
   //   const CompleteList = async () => {
@@ -28,6 +29,9 @@ const Complete =  () => {
   useEffect(() => {
     setCompletes([...CompleteDummy])
   },[])
+
+   
+  
 
 
   return (

@@ -3,8 +3,7 @@ import React from 'react'
 const CompleteList = ({complete}) => {
   return (
     <li className='list'>
-      <div>タスクの名前:　{complete.title}</div>
-      <div>タスクの種類:　{complete.type}</div>
+      <div className='taskName'>タスク名:　{complete.title}</div>
       {complete.date > 0 ? (
         <span className='success'>おめでとう！タスクは無事達成</span>
       ) : (

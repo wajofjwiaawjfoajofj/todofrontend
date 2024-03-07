@@ -50,7 +50,7 @@ const Form = () => {
           />
           </div>
           <div className='selectwrapper'>
-      
+          <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
             value={type}
