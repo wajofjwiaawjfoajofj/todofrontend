@@ -21,7 +21,7 @@ export default GetTodos;
 //Todoの作成
 export const Create = async (todoData) => {
     try{
-        const res = await axios.post(`${URL_API}/todomodels`, todoData)
+        const res = await axios.post(`${URL_API}/todomodel`, todoData)
         return res.data;
     }
     catch(error)
