@@ -12,9 +12,8 @@ const Form = () => {
   //usenavigateをインスタンス化
   // const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
-
-    e.preventDefault();
+  const handleSubmit = async () => {
+  
     try {
       Create({
         title,
