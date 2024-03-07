@@ -34,7 +34,7 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={(e) => handleSubmit(e)}>
+      <form onSubmit={handleSubmit}>
         <div className='wrraper'>
         <div className='taskwrappr'>
           <InputLabel id='title'>タスクの追加</InputLabel>
