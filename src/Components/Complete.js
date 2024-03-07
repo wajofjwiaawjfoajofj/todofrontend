@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
 // import { getComplete } from '../API/api'
 import { CompleteDummy } from '../Dummy/dummy'
+import CompleteList from './CompleteList'
+import './Complete.css'
 
 const Complete =  () => {
 
@@ -29,21 +31,16 @@ const Complete =  () => {
 
 
   return (
-    <div>
-  <h2>完了済みのTodo</h2>
-  {completes.map((complete) => (
-    <div key={complete.id}>
-      {complete.title}
-      {complete.type}
-      {complete.date}
-      {complete.date > 0 ? (
-        <span>おめでとう！タスクは無事達成</span>
-      ) : (
-        <span>残念！タスクの期限を守れませんでした</span>
-      )}
+  <div className='completeWrapper'>
+    <div className='complete' > 
+     <h2>完了済みのTodo</h2>
+     <ul className='listcontainer'>
+     {completes.map((complete,index) => (
+       <CompleteList  key={index}  complete={complete} />
+      ))}
+      </ul>
     </div>
-  ))}
-</div>
+ </div>
   )
 }
 

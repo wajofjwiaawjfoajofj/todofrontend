@@ -1,0 +1,34 @@
+.completeWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 4000px;
+    margin-right: 100px;
+}
+
+.complete{
+    margin-top: 100px;
+}
+
+
+.listcontainer{
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+    padding: 30px 10px;
+}
+
+.list{
+    margin-bottom: 20px;
+}
+
+
+
+
+.success{
+    color: blue;
+}
+
+.failed{
+    color: brown;
+}

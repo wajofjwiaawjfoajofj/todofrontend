@@ -17,10 +17,10 @@ const Listcollection = ({ todos,todos2, onTodoDelete, onTodoComplete }) => {
       <div>
         <h2>Udemy</h2>
         <ul>
-     {todos.map((todo) =>
+     {todos.map((todo,index) =>
        todo.type === 'udemy' ? (
       <ListcollectionItems
-        key={todo.id} 
+        key={index} 
         todo={todo} 
         onDelete={handleDelete}
         onComplete={handleComplete}
@@ -30,10 +30,10 @@ const Listcollection = ({ todos,todos2, onTodoDelete, onTodoComplete }) => {
 </ul>
         <h2>Paiza</h2>
         <ul>
-          {todos2.map((todo) =>
+          {todos2.map((todo,index) =>
             todo.type === 'paiza' ? (
               <ListcollectionItems
-                key={todo.id} 
+                key={index} 
                 todo={todo} 
                 onDelete={handleDelete}
                 onComplete={handleComplete}
