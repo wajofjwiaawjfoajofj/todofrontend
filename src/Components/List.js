@@ -50,29 +50,46 @@
 
 
 import React, { useEffect, useState } from 'react';
-import TodoListDummy from '../Dummy/dummy';
-import { TodoListDummy2 } from '../Dummy/dummy';
+// import TodoListDummy from '../Dummy/dummy';
+// import { TodoListDummy2 } from '../Dummy/dummy';
 // import { Button } from '@mui/material';
 import Listcollection from './Listcollection';
 import './List.css';
+import GetTodos from '../API/api';
 
 
 
 const List = () => {
 
-    //ダミーデータ
+    // //ダミーデータ
+    // const [todos, setTodos] = useState([]);
+    // const [todos2, setTodo2] = useState([]);
+
+
+    // //表示用
+    // useEffect(() => {
+    //     setTodos([...TodoListDummy]);
+    // }, []);
+
+    // useEffect(() => {
+    //     setTodo2([TodoListDummy2]);
+    // }, []);
+
     const [todos, setTodos] = useState([]);
-    const [todos2, setTodo2] = useState([]);
-
-
-    //表示用
-    useEffect(() => {
-        setTodos([...TodoListDummy]);
-    }, []);
 
     useEffect(() => {
-        setTodo2([TodoListDummy2]);
-    }, []);
+        const TodoList = async () => {
+            try{
+                const getFromAPI = await GetTodos();
+                setTodos(getFromAPI);
+            }
+            catch(error){
+                console.log('エラーが発生しました', error)
+            }
+        }
+        TodoList();
+    },[])
+
 
 
     //削除
@@ -98,7 +115,7 @@ const List = () => {
     return (
         <div className='Listmain'>
             <div className='Listwrapper'>
-            <Listcollection  todos={todos}  todos2={todos2} onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
+            <Listcollection  todos={todos}   onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
             </div>
         </div>
     );
