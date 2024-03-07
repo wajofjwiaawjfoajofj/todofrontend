@@ -12,10 +12,10 @@ const Form = () => {
   //usenavigateをインスタンス化
   // const navigate = useNavigate();
 
-  const handleSubmit = async () => {
+  const handleSubmit = async (e) => {
   
     try {
-      Create({
+      await  Create({
         title,
         // type,
         // day,
