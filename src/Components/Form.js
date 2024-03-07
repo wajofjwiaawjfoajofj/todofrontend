@@ -53,7 +53,7 @@ const Form = () => {
           <InputLabel id='Select'>種類の選択</InputLabel>
           <Input
             type='text'
-            id='title'
+            id='Select'
             value={type}
             onChange={(e) => setTitle(e.target.value)}
             placeholder='種類を選択'
