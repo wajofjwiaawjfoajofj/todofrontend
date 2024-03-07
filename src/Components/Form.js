@@ -6,27 +6,27 @@ import './Form.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
-  const [type, setType] = useState('');
-  const [day, setDay] = useState(new Date());
+  // const [type, setType] = useState('');
+  // const [day, setDay] = useState(new Date());
 
   //usenavigateをインスタンス化
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log(title, type, day,new Date());
+
     e.preventDefault();
     try {
       Create({
         title,
-        type,
-        day,
-        created: new Date()
+        // type,
+        // day,
+        // created: new Date()
       });
 
 
       setTitle('');
-      setType('');
-      setDay(new Date());
+      // setType('');
+      // setDay(new Date());
     } catch (error) {
       console.log(error);
     }
@@ -50,7 +50,7 @@ const Form = () => {
             fullWidth
           />
           </div>
-          <div className='selectwrapper'>
+          {/* <div className='selectwrapper'>
           <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
@@ -96,7 +96,7 @@ const Form = () => {
               >
                Todoを追加する
              </Button>
-          </div>
+          </div> */}
         </div>
       </form>
     </>

@@ -34,7 +34,7 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
             <li>
              <p>{todo.title}</p>
             <div className='inner'>
-            {`残り${todo.date}日`}
+            {`残り${todo.day}日`}
             <Button variant='outlined' onClick={handleCompleteClick}>完了</Button>
             <Button variant='outlined'  color='warning' onClick={handleDeleteClick}>削除</Button>
             <Button variant='outlined'  color='info'>編集</Button>
