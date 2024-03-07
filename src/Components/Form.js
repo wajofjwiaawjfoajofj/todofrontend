@@ -51,7 +51,17 @@ const Form = () => {
           </div>
           <div className='selectwrapper'>
           <InputLabel id='Select'>種類の選択</InputLabel>
-          <Select
+          <Input
+            type='text'
+            id='title'
+            value={type}
+            onChange={(e) => setTitle(e.target.value)}
+            placeholder='種類を選択'
+            required
+            minLength={2}
+            fullWidth
+          />
+          {/* <Select
             id='Select'
             value={type}
             onChange={(e) => setType(e.target.value)}
@@ -71,7 +81,7 @@ const Form = () => {
             <MenuItem value='dev'>個人開発</MenuItem>
             <MenuItem value='newqrd'>就活</MenuItem>
             <MenuItem value='other'>その他</MenuItem>
-          </Select>
+          </Select> */}
           </div>
           {/* <div className='datewrapper'>
             <InputLabel id='date'>期限の設定</InputLabel>
