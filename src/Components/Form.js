@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Input, InputLabel, MenuItem, Select } from '@mui/material';
 import { Create } from '../API/api';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import './Form.css';
 
 const Form = () => {
@@ -10,7 +10,7 @@ const Form = () => {
   // const [day, setDay] = useState(new Date());
 
   //usenavigateをインスタンス化
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
 
@@ -30,7 +30,7 @@ const Form = () => {
     } catch (error) {
       console.log(error);
     }
-    navigate('/list')
+    // navigate('/list')
   };
 
   return (
