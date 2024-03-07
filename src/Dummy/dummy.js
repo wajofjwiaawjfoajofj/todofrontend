@@ -11,6 +11,10 @@ const TodoListDummy = [
     title: 'javascriptマスターコース',
     type: 'udemy' ,
     date: 12  
+},{
+    title: "関口paizaAランク",
+    type: 'paiza',
+    date: '15'
 }
 ]
 

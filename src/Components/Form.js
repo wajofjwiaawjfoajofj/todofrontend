@@ -1,35 +1,35 @@
 import React, { useState } from 'react';
 import { Button, Input, InputLabel, MenuItem, Select } from '@mui/material';
 import { Create } from '../API/api';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './Form.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
   const [type, setType] = useState('');
-  // const [day, setDay] = useState(new Date());
+  const [day, setDay] = useState(new Date());
 
   //usenavigateをインスタンス化
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-  
+    e.preventDefault()
     try {
       await  Create({
         title,
-        type
-        // day,
-        // created: new Date()
+        type,
+        day,
+        created: new Date()
       });
 
 
       setTitle('');
       setType('');
-      // setDay(new Date());
+      setDay(new Date());
     } catch (error) {
       console.log(error);
     }
-    // navigate('/list')
+    navigate('/list')
   };
 
   return (
@@ -50,18 +50,8 @@ const Form = () => {
           />
           </div>
           <div className='selectwrapper'>
-          <InputLabel id='Select'>種類の選択</InputLabel>
-          <Input
-            type='text'
-            id='Select'
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            placeholder='種類を選択'
-            required
-            minLength={2}
-            fullWidth
-          />
-          {/* <Select
+      
+          <Select
             id='Select'
             value={type}
             onChange={(e) => setType(e.target.value)}
@@ -81,9 +71,9 @@ const Form = () => {
             <MenuItem value='dev'>個人開発</MenuItem>
             <MenuItem value='newqrd'>就活</MenuItem>
             <MenuItem value='other'>その他</MenuItem>
-          </Select> */}
+          </Select>
           </div>
-          {/* <div className='datewrapper'>
+          <div className='datewrapper'>
             <InputLabel id='date'>期限の設定</InputLabel>
             <Input
               id='date'
@@ -95,7 +85,7 @@ const Form = () => {
               required
               className='date'
             />
-          </div> */}
+          </div>
           <div className='buttonwrapper'>
             <Button 
               type='submit' 
