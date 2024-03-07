@@ -55,7 +55,7 @@ const Form = () => {
             type='text'
             id='Select'
             value={type}
-            onChange={(e) => setTitle(e.target.value)}
+            onChange={(e) => setType(e.target.value)}
             placeholder='種類を選択'
             required
             minLength={2}
