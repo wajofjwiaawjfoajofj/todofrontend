@@ -2,9 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     max-height: 4000px;
     margin-right: 100px;
+    margin-top: 100px;
 }
 
 

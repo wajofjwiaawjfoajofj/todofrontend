@@ -6,6 +6,15 @@
     margin-right: 100px;
 }
 
+@media screen and (max-width:768px){
+    .completeWrapper{
+        margin-right: 0;
+    }
+}
+
+
+
+
 .complete{
     margin-top: 100px;
 }
@@ -17,6 +26,17 @@
     margin-right: 70px;
     padding: 30px 10px;
 }
+
+@media screen and (max-width:765px){
+    .listcontainer{
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+}
+
+
+
 
 .list{
     margin-bottom: 20px;
