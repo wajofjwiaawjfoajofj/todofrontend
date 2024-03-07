@@ -6,7 +6,7 @@ import './Form.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
-  // const [type, setType] = useState('');
+  const [type, setType] = useState('');
   // const [day, setDay] = useState(new Date());
 
   //usenavigateをインスタンス化
@@ -17,14 +17,14 @@ const Form = () => {
     try {
       await  Create({
         title,
-        // type,
+        type
         // day,
         // created: new Date()
       });
 
 
       setTitle('');
-      // setType('');
+      setType('');
       // setDay(new Date());
     } catch (error) {
       console.log(error);
@@ -49,7 +49,7 @@ const Form = () => {
             fullWidth
           />
           </div>
-          {/* <div className='selectwrapper'>
+          <div className='selectwrapper'>
           <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
@@ -73,7 +73,7 @@ const Form = () => {
             <MenuItem value='other'>その他</MenuItem>
           </Select>
           </div>
-          <div className='datewrapper'>
+          {/* <div className='datewrapper'>
             <InputLabel id='date'>期限の設定</InputLabel>
             <Input
               id='date'

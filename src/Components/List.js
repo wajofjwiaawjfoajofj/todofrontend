@@ -27,7 +27,7 @@ const List = () => {
     <h2>Udemy</h2>
     <ul>
       {todos.map((todo) => (
-        <li key={todo.id}>{todo.title}</li>
+        <li key={todo.id}>{todo.title}{todo.type}</li>
       ))}
     </ul>
   </div>
