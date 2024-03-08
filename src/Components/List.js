@@ -29,6 +29,7 @@ const List = () => {
         <li key={todo.id}>
             {todo.title}
             {todo.type}
+            {todo.day}
             </li>
       ))}
     </ul>
