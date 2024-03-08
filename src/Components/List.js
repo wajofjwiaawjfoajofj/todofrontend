@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import GetTodos from '../API/api';
+import Listcollection from './Listcollection';
+import './List.css';
+
 
 const List = () => {
 
@@ -20,25 +23,25 @@ const List = () => {
 
 
 
-  return (
-    <div>
-    <h1>Todoリスト</h1>
-    <h2>Udemy</h2>
-    <ul>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-            {todo.title}
-            {todo.kind}
-            {todo.day}
-            </li>
-      ))}
-    </ul>
-  </div>
+//   return (
+//     <div>
+//     <h1>Todoリスト</h1>
+//     <h2>Udemy</h2>
+//     <ul>
+//       {todos.map((todo) => (
+//         <li key={todo.id}>
+//             {todo.title}
+//             {todo.kind}
+//             {todo.day}
+//             </li>
+//       ))}
+//     </ul>
+//   </div>
   
-  )
-}
+//   )
+// }
 
-export default List
+// export default List
 
 
 
@@ -91,33 +94,33 @@ export default List
 
 
 
-//     //削除
-//     const handleDelete = async(todoId) => {
-//         try{
-//         setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
-//         }
-//         catch(error){
-//          console.log(error)
-//         }
-//     }
+    //削除
+    const handleDelete = async(todoId) => {
+        try{
+        setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
+        }
+        catch(error){
+         console.log(error)
+        }
+    }
 
-//    //コンプリート
-//    const handleComplete = async (todoId) => {
-//     try{
-//         setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
-//         }
-//         catch(error){
-//          console.log(error)
-//         }
-//    }
+   //コンプリート
+   const handleComplete = async (todoId) => {
+    try{
+        setTodos((prev) => prev.filter((todo) => todo.id !== todoId ))
+        }
+        catch(error){
+         console.log(error)
+        }
+   }
 
-//     return (
-//         <div className='Listmain'>
-//             <div className='Listwrapper'>
-//             <Listcollection  todos={todos} todos2={todos2}  onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
-//             </div>
-//         </div>
-//     );
-// }
+    return (
+        <div className='Listmain'>
+            <div className='Listwrapper'>
+            <Listcollection  todos={todos}   onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
+            </div>
+        </div>
+    );
+}
 
-// export default List;
+export default List;

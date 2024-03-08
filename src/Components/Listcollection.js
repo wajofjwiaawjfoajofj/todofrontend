@@ -18,7 +18,7 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
         <h2>Udemy</h2>
         <ul>
      {todos.map((todo,index) =>
-       todo.type === 'udemy' ? (
+       todo.kimd === 'udemy' ? (
       <ListcollectionItems
         key={index} 
         todo={todo} 
@@ -31,7 +31,20 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
         <h2>Paiza</h2>
         <ul>
           {todos.map((todo,index) =>
-            todo.type === 'paiza' ? (
+            todo.kind === 'paiza' ? (
+              <ListcollectionItems
+                key={index} 
+                todo={todo} 
+                onDelete={handleDelete}
+                onComplete={handleComplete}
+              />
+            ) : null
+          )}
+        </ul>
+        <h2>参考書</h2>
+        <ul>
+          {todos.map((todo,index) =>
+            todo.kind === 'study' ? (
               <ListcollectionItems
                 key={index} 
                 todo={todo} 
