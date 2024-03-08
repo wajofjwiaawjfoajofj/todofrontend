@@ -28,7 +28,7 @@ const List = () => {
       {todos.map((todo) => (
         <li key={todo.id}>
             {todo.title}
-            {todo.type}
+            {todo.kind}
             {todo.day}
             </li>
       ))}

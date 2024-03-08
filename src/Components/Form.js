@@ -6,26 +6,26 @@ import './Form.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
-  const [type, setType] = useState('');
+  const [kind, setKind] = useState('');
   const [day, setDay] = useState('');
 
   //usenavigateをインスタンス化
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log(title,type)
+    console.log(title,kind)
     console.log(typeof day)
     
     try {
       await  Create({
         title,
-        type,
+        kind,
         day
       });
 
 
       setTitle('');
-      setType('');
+      setKind('');
       setDay('');
     } catch (error) {
       console.log(error);
@@ -54,8 +54,8 @@ const Form = () => {
           <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
-            value={type}
-            onChange={(e) => setType(e.target.value)}
+            value={kind}
+            onChange={(e) => setKind(e.target.value)}
             required
             className='select'
           >
