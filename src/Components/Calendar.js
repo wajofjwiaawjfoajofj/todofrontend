@@ -8,6 +8,7 @@ import { Button, Input, InputLabel } from '@mui/material';
 const Calendar = () => {
   const [events, setEvents] = useState([]);
 
+
   useEffect(() => {
     const storedEvents = JSON.parse(localStorage.getItem('events'));
     if (storedEvents) {
@@ -27,19 +28,29 @@ const Calendar = () => {
     localStorage.setItem('events', JSON.stringify(updatedEvents));
   };
 
+  const handlelocalStrageDelete = () => {
+    alert('削除してもいい？')
+    localStorage.clear('events');
+    window.location.reload();
+  }
+
+
+
 
   return (
     <div className='calendarWrapper'>
       <div className='calendarInner'>
         <form onSubmit={handleSubmit} className="Form">
-          <div>
+          <div className='titleWarpper'>
             <InputLabel id="title">タイトル</InputLabel>
-            <Input id="title" type='text' name='title' placeholder='タイトル' required />
+            <Input id="title" type='text' name='title' placeholder='todoを追加' required className='todo' />
           </div>
           <div><Input type='date' name='start' required /> </div>
           <div><Input type='date' name='end' required /> </div>
           <Button type='submit'>イベントを追加</Button>
+          <Button onClick={handlelocalStrageDelete}>Todo削除</Button>
         </form>
+
         <FullCalendar
           plugins={[dayGridPlugin]}
           initialView='dayGridMonth'
