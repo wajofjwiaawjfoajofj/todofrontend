@@ -15,7 +15,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     console.log(title,type)
     console.log(typeof day)
-    e.preventDefault()
+    
     try {
       await  Create({
         title,
