@@ -27,7 +27,7 @@ const List = () => {
     <ul>
       {todos.map((todo) => (
         <li key={todo.id}>
-            {todo.title}{todo.type}</li>
+            {todo.title}</li>
       ))}
     </ul>
   </div>
