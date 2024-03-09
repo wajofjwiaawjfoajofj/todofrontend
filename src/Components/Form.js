@@ -66,7 +66,7 @@ const Form = () => {
           />
           </div>
           <div className='selectwrapper'>
-          <div  className='labelWrapper labelWrapperdate'><InputLabel id='Select'>種類の選択</InputLabel><Chip label="必須" color='error' variant="outlined" size="small" /></div>
+          <div  className='labelWrapper labelWrapperdate'><InputLabel id='Select'>種類の選択</InputLabel><Chip label="必須" color='error' variant="" size="small" /></div>
           <Select
             id='Select'
             value={kind}
@@ -91,7 +91,7 @@ const Form = () => {
           </Select>
           </div>
           <div className='datewrapper'>
-          <div className='labelWrapper'><InputLabel id='date'>期限の設定</InputLabel><Chip label="必須" color='error' variant="outlined" size="small" /></div>
+          <div className='labelWrapper'><InputLabel id='date'>期限の設定</InputLabel><Chip label="必須" color='error' variant="" size="small" /></div>
             <Input
               id='date'
               type='date'
