@@ -21,16 +21,22 @@ form{
 
 .taskwrappr{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 
 /* pc版のみ */
-@media screen and (min-width:765px){
+@media screen and (min-width:1080px){
+    form{
+       height: 100vh;
+    }
     .taskwrappr{
         display: flex;
         flex-direction: row;
-        gap: 20px
+        gap: 30px;
+        padding: 20px;
+        border-top: 0.5px gray solid;
+        padding-top: 50px;
     }
 }
 
@@ -42,6 +48,8 @@ form{
     padding-bottom: 5px;
 }
 
+
+
 .labelWrapperdate{
     padding-bottom: 10px !important;
 }
@@ -50,7 +58,19 @@ form{
 
 .selectwrapper{
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* pc版のみ */
+@media screen and (min-width:1080px){
+    .selectwrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 20px;
+        border-top: 0.5px gray solid;
+        padding-top: 50px;
+    }
 }
 
 .select{
@@ -60,7 +80,20 @@ form{
 
 .datewrapper{
     width: 100%;
-    margin-bottom: 30px;
+}
+
+/* pc版のみ */
+@media screen and (min-width:1080px){
+    .datewrapper{
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        padding: 20px;
+        border-top: 0.5px gray solid;
+        border-bottom: 0.5px gray solid;
+        padding-top: 50px;
+        padding-bottom: 40px;
+    }
 }
 
 .date{
@@ -71,8 +104,7 @@ form{
    display: flex;
    justify-content: center;
    align-items: center;
-   margin: 60px;
-   margin-bottom: 10px;
+   margin: 40px;
 }
 
 /* sp用のcss */
