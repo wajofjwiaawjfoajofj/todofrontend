@@ -19,6 +19,7 @@
 
 .rightside{
   width: 75%;
+  border-left: 0.7px solid black;
 }
 
 
@@ -50,6 +51,7 @@
   
   .rightside{
     width: 100%;
+    border-left: none;
   }
   
 }

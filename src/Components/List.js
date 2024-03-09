@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import GetTodos from '../API/api';
 import Listcollection from './Listcollection';
 import './List.css';
+// import TodoListDummy from '../Dummy/dummy';
 
 
 const List = () => {
@@ -22,75 +23,11 @@ const List = () => {
     },[])
 
 
+// ダミーデータ
+    // useEffect(() => {
+    //     setTodos([...TodoListDummy]);
+    // }, []);
 
-//   return (
-//     <div>
-//     <h1>Todoリスト</h1>
-//     <h2>Udemy</h2>
-//     <ul>
-//       {todos.map((todo) => (
-//         <li key={todo.id}>
-//             {todo.title}
-//             {todo.kind}
-//             {todo.day}
-//             </li>
-//       ))}
-//     </ul>
-//   </div>
-  
-//   )
-// }
-
-// export default List
-
-
-
-
-
-
-// //↓ダミーデータ用
-
-
-// import React, { useEffect, useState } from 'react';
-// import TodoListDummy from '../Dummy/dummy';
-// import { TodoListDummy2 } from '../Dummy/dummy';
-// // import { Button } from '@mui/material';
-// import Listcollection from './Listcollection';
-// import './List.css';
-// // import GetTodos from '../API/api';
-
-
-
-// const List = () => {
-
-//     // //ダミーデータ
-//     const [todos, setTodos] = useState([]);
-//     const [todos2, setTodo2] = useState([]);
-
-
-//     // //表示用
-//     useEffect(() => {
-//         setTodos([...TodoListDummy]);
-//     }, []);
-
-//     useEffect(() => {
-//         setTodo2([TodoListDummy2]);
-//     }, []);
-
-//     // const [todos, setTodos] = useState([]);
-
-//     // useEffect(() => {
-//     //     const TodoList = async () => {
-//     //         try{
-//     //             const getFromAPI = await GetTodos();
-//     //             setTodos(getFromAPI);
-//     //         }
-//     //         catch(error){
-//     //             console.log('エラーが発生しました', error)
-//     //         }
-//     //     }
-//     //     TodoList();
-//     // },[])
 
 
 

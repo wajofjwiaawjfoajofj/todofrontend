@@ -70,6 +70,7 @@ const Form = () => {
             <MenuItem value='job'>インターン、バイト</MenuItem>
             <MenuItem value='youtube'>Youtube</MenuItem>
             <MenuItem value='dev'>個人開発</MenuItem>
+            <MenuItem value='hackathon'>ハッカソン</MenuItem>
             <MenuItem value='newqrd'>就活</MenuItem>
             <MenuItem value='other'>その他</MenuItem>
           </Select>
