@@ -4,6 +4,9 @@ import ListcollectionItems from './ListcollectionItems';
 // import { CheckBox } from '@mui/icons-material';
 
 const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
+
+   console.log(todos.remaining)
+
     const handleDelete = (todoId) => {
       onTodoDelete(todoId);
     };

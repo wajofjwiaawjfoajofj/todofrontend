@@ -25,6 +25,16 @@ form{
 }
 
 
+/* pc版のみ */
+@media screen and (min-width:765px){
+    .taskwrappr{
+        display: flex;
+        flex-direction: row;
+        gap: 20px
+    }
+}
+
+
 .labelWrapper{
     display: flex;
     align-items: center;
