@@ -8,6 +8,7 @@ const Form = () => {
   const [title, setTitle] = useState('');
   const [kind, setKind] = useState('');
   const [day, setDay] = useState('');
+  const [url, setUrl] = useState('');
 
   //usenavigateをインスタンス化
   const navigate = useNavigate();
@@ -20,13 +21,15 @@ const Form = () => {
       await  Create({
         title,
         kind,
-        day
+        day,
+        url
       });
 
 
       setTitle('');
       setKind('');
       setDay('');
+      setUrl('');
     } catch (error) {
       console.log(error);
     }
@@ -85,6 +88,17 @@ const Form = () => {
               required
               className='date'
             />
+          </div>
+          <div className='taskwrappr'>
+          <InputLabel id='url'>URLの追加(任意)</InputLabel>
+          <Input
+            type='text'
+            id='url'
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder='参照にしたいURLを追加してください'
+            fullWidth
+          />
           </div>
           <div className='buttonwrapper'>
             <Button 

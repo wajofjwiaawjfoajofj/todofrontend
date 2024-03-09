@@ -33,6 +33,7 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
         <>
             <li>
              <p>{todo.title}</p>
+             <p>{todo.url}</p>
             <div className='inner'>
             {`残り${todo.day}日`}
             <Button variant='outlined'  onClick={handleCompleteClick}>完了</Button>
