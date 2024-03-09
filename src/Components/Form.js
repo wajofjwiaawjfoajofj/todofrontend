@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Input, InputLabel, MenuItem, Select } from '@mui/material';
+import { Button, Input, InputLabel, MenuItem, Select,Chip } from '@mui/material';
 import { Create } from '../API/api';
 import { useNavigate } from 'react-router-dom';
 import './Form.css';
@@ -14,7 +14,8 @@ const Form = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
-    console.log(title,kind)
+
+    console.log(title,kind,url,day)
     console.log(typeof day)
     
     try {
@@ -41,20 +42,31 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <div className='wrraper'>
         <div className='taskwrappr'>
-          <InputLabel id='title'>タスクの追加</InputLabel>
+         <div  className='labelWrapper'><InputLabel id='title'>Todoの追加</InputLabel><Chip label="必須" color='error' variant="" size="small" /></div>
           <Input
             type='text'
             id='title'
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder='タスクを追加してください　　 (例： paizaAランク獲得)'
+            placeholder='タスク名を追加してください　　 (例： paizaAランク獲得)'
             required
             minLength={2}
             fullWidth
           />
           </div>
+          <div className='taskwrappr'>
+          <div  className='labelWrapper'><InputLabel id='url'>URLの追加</InputLabel><Chip label="任意" color='primary' variant="outlined" size="small" /></div>
+          <Input
+            type='text'
+            id='url'
+            value={url}
+            onChange={(e) => setUrl(e.target.value)}
+            placeholder='参照にしたいURLを追加してください'
+            fullWidth
+          />
+          </div>
           <div className='selectwrapper'>
-          <InputLabel id='Select'>種類の選択</InputLabel>
+          <div  className='labelWrapper labelWrapperdate'><InputLabel id='Select'>種類の選択</InputLabel><Chip label="必須" color='error' variant="outlined" size="small" /></div>
           <Select
             id='Select'
             value={kind}
@@ -79,7 +91,7 @@ const Form = () => {
           </Select>
           </div>
           <div className='datewrapper'>
-            <InputLabel id='date'>期限の設定</InputLabel>
+          <div className='labelWrapper'><InputLabel id='date'>期限の設定</InputLabel><Chip label="必須" color='error' variant="outlined" size="small" /></div>
             <Input
               id='date'
               type='date'
@@ -88,17 +100,6 @@ const Form = () => {
               required
               className='date'
             />
-          </div>
-          <div className='taskwrappr'>
-          <InputLabel id='url'>URLの追加(任意)</InputLabel>
-          <Input
-            type='text'
-            id='url'
-            value={url}
-            onChange={(e) => setUrl(e.target.value)}
-            placeholder='参照にしたいURLを追加してください'
-            fullWidth
-          />
           </div>
           <div className='buttonwrapper'>
             <Button 

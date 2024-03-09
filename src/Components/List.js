@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from 'react'
-import GetTodos from '../API/api';
+// import GetTodos from '../API/api';
 import Listcollection from './Listcollection';
 import './List.css';
-// import TodoListDummy from '../Dummy/dummy';
+import TodoListDummy from '../Dummy/dummy';
 
 
 const List = () => {
 
     const [todos, setTodos] = useState([]);
 
-    useEffect(() => {
-        const TodoList = async () => {
-            try{
-                const getFromAPI = await GetTodos();
-                setTodos(getFromAPI);
-            }
-            catch(error){
-                console.log('エラーが発生しました', error)
-            }
-        }
-        TodoList();
-    },[])
+    // useEffect(() => {
+    //     const TodoList = async () => {
+    //         try{
+    //             const getFromAPI = await GetTodos();
+    //             setTodos(getFromAPI);
+    //         }
+    //         catch(error){
+    //             console.log('エラーが発生しました', error)
+    //         }
+    //     }
+    //     TodoList();
+    // },[])
 
 
 // ダミーデータ
-    // useEffect(() => {
-    //     setTodos([...TodoListDummy]);
-    // }, []);
+    useEffect(() => {
+        setTodos([...TodoListDummy]);
+    }, []);
 
 
 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ListcollectionItems from './ListcollectionItems';
+
 // import { CheckBox } from '@mui/icons-material';
 
 const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
@@ -13,7 +14,8 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
 
     //ソートを使って残り日数順に並べる
     todos.sort((m,n) => m.day -  n.day)
-
+    
+    const [showAll,  setShowAll]  =  useState(true)
     const [showUdemy, setShowUdemy] = useState(true);
     const [showPaiza, setShowPaiza] = useState(true);
     const [showStudy, setShowStudy] = useState(true);
@@ -30,6 +32,9 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
 
     const handleCheckChange = (category) => {
       switch(category){
+        case 'all':
+        setShowAll(!showAll);
+        break;
         case 'udemy':
         setShowUdemy(!showUdemy);
         break;
@@ -71,32 +76,73 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
 
   
     return (
-      <div>
-        <div>
+      <section>
+        <div className='checkboxWrapper'>
+        <div className='checkboxContainer'>
+        <label id="all">全てのタスク:</label>
+        <input type='checkbox' checked={showAll}  onChange={() => handleCheckChange('all')} id="all"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="udemy">udemy:</label>
         <input type='checkbox' checked={showUdemy}  onChange={() => handleCheckChange('udemy')} id="udemy"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="paiza">Paiza:</label>
         <input type='checkbox' checked={showPaiza}  onChange={() => handleCheckChange('paiza')} id="paiza"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="study">参考書:</label>
         <input type='checkbox' checked={showStudy}  onChange={() => handleCheckChange('study')} id="study"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="qualification">資格:</label>
         <input type='checkbox' checked={showQualification}  onChange={() => handleCheckChange('qualification')} id="qualification"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="codetest">コーディングテスト:</label>
         <input type='checkbox' checked={showCodetest}  onChange={() => handleCheckChange('codetest')} id="codetest"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="youtube">Youtube:</label>
         <input type='checkbox' checked={showYoutube}  onChange={() => handleCheckChange('youtube')} id="youtube"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="job">アルバイト・インターン:</label>
         <input type='checkbox' checked={showJob}  onChange={() => handleCheckChange('job')} id="job"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="hackathon">ハッカソン:</label>
         <input type='checkbox' checked={showHackathon}  onChange={() => handleCheckChange('hackathon')} id="hackathon"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="dev">個人開発:</label>
         <input type='checkbox' checked={showDev}  onChange={() => handleCheckChange('dev')} id="dev"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="newqrd">就活:</label>
         <input type='checkbox' checked={shownewqrd}  onChange={() => handleCheckChange('newqrd')} id="newqrd"  />
+        </div>
+        <div className='checkboxContainer'>
         <label id="other">その他:</label>
         <input type='checkbox' checked={showOther}  onChange={() => handleCheckChange('other')} id="other"  />
         </div>
+        </div>
 
+        {showAll && (
+          <div>
+          <h2>全てのタスク</h2>
+          <ul>
+            {todos.map((todo, index) =>
+                <ListcollectionItems
+                  key={index}
+                  todo={todo}
+                  onDelete={handleDelete}
+                onComplete={handleComplete}
+                />
+            )}
+          </ul>
+          </div>
+        )}
         {showUdemy && (
           <div>
           <h2>Udemy</h2>
@@ -284,7 +330,7 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
           </ul>
           </div>
         )}
-      </div>
+      </section>
     );
   };
   
