@@ -18,7 +18,7 @@ const TodoListDummy = [
     title: "関口paizaAランク",
     kind: 'paiza',
     url:   'http://localhost:3000/list',
-    remaining: 15
+    remaining: 1
 },{
     title: "HTML+CSSコーディング教科書",
     kind: 'study',
