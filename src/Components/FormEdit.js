@@ -37,6 +37,7 @@ const FormEdit = ({todo, onEdit}) => {
         <InputLabel>タイトルの修正</InputLabel>
       <Input  type='text' value={title} onChange={(e) => setTitle(e.target.value)}/>
       </div>
+      <div className='SelectEditWrapper'>
       <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
@@ -59,13 +60,14 @@ const FormEdit = ({todo, onEdit}) => {
             <MenuItem value='newqrd'>就活</MenuItem>
             <MenuItem value='other'>その他</MenuItem>
           </Select>
+          </div>
           <Button 
               type='submit' 
               variant='contained' 
               className='button'
               size='large'
               >
-               Todoを修正する
+               タスクを修正する
              </Button>
     </form>
     </div>
