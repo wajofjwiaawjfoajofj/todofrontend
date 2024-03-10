@@ -2,6 +2,8 @@ import React from 'react'
 import { Update } from '../API/api'
 import { useState } from 'react'
 import { InputLabel,Input,Select,MenuItem,Button } from '@mui/material'
+import './FormEdit.css'
+
 
 const FormEdit = ({todo, onEdit}) => {
 
@@ -28,10 +30,13 @@ const FormEdit = ({todo, onEdit}) => {
 
 
   return (
-    <form onSubmit={handleSubmit}>
-        <div>編集する</div>
+    <div className='formEditWrapper'>
+    <form onSubmit={handleSubmit} className='form'>
+        <h3 className='formEditTitle'>編集する</h3>
+        <div className='TitleEditWrapper'>
         <InputLabel>タイトルの修正</InputLabel>
-        <Input  type='text' value={title} onChange={(e) => setTitle(e.target.value)}/>
+      <Input  type='text' value={title} onChange={(e) => setTitle(e.target.value)}/>
+      </div>
       <InputLabel id='Select'>種類の選択</InputLabel>
           <Select
             id='Select'
@@ -63,6 +68,7 @@ const FormEdit = ({todo, onEdit}) => {
                Todoを修正する
              </Button>
     </form>
+    </div>
   )
 }
 

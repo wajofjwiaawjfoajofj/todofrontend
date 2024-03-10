@@ -24,7 +24,6 @@ const About = () => {
       <ul>
         <li>Reby on Rails(APIモード)</li>
         <li>Docker</li>
-        <li>MySQL</li>
       </ul>
       <h2>このアプリの機能</h2>
     </div>

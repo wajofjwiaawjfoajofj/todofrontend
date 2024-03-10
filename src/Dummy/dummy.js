@@ -14,27 +14,27 @@ const TodoListDummy = [
 },{
     title: "関口paizaAランク",
     kind: 'paiza',
-    remaining: '15'
+    remaining: 15
 },{
     title: "HTML+CSSコーディング教科書",
     kind: 'study',
-    remaining: '15'
+    remaining: 19
 },{
     title: "基本情報の参考書1週",
     kind: 'qualification',
-    remaining: '15'
+    remaining: 15
 },{
     title: "pyhtonコーディングテスト",
     kind: 'codetest',
-    remaining: '15'
+    remaining: 26
 },{
     title: "フロントエンドとバックエンドを繋げる",
     kind: 'dev',
-    remaining: '4'
+    remaining: 8
 },{
     title: "ディスクトップを購入する",
     kind: 'other',
-    remaining: '60'
+    remaining: 65
 }
 ]
 
