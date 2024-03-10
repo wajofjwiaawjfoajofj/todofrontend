@@ -16,7 +16,7 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
     };
 
     //ソートを使って残り日数順に並べる
-    todos.sort((m,n) => m.day -  n.day)
+    todos.sort((m,n) => m.remaining -  n.remaining)
     
     const [showAll,  setShowAll]  =  useState(true)
     const [showUdemy, setShowUdemy] = useState(true);

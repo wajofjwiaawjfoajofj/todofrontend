@@ -52,10 +52,10 @@ export const TodoListDummy2 = {
 
 export const CompleteDummy = [{
     title: "関口paizaAランク",
-    date: -1
+    remaining: -1
 },{
     title: "React本格入門読み切る",
-    date: 7
+    remaining: 7
 }
 ]
 
