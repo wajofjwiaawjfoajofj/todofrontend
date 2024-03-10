@@ -109,7 +109,7 @@ const Form = () => {
               className='button'
               size='large'
               >
-               Todoを追加する
+               タスクを追加を追加する
              </Button>
           </div>
         </div>
