@@ -109,7 +109,7 @@ const Form = () => {
               className='button'
               size='large'
               >
-               タスクを追加を追加する
+               taskを追加を追加する
              </Button>
           </div>
         </div>
