@@ -22,8 +22,11 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
 
     const handleDeleteClick = async () => {
         try{
+            const conform = window.confirm('本当に削除してもよろしいでしょうか?');
+            if(conform){
             await Delete(todo.id);
             onDelete(todo.id);
+            }
         }
         catch(error){
             console.log(error)
@@ -47,8 +50,7 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
     <div>
         <>
         {!isEdit ?(<li>
-             <p>{todo.title}</p>
-             <p>{todo.url}</p>
+             <p><a href={todo.url}>{todo.title}</a></p>
             <div className='inner'>
             {`残り${todo.remaining !== undefined ? todo.remaining : "未定"}日`}
             <Button variant='outlined'  onClick={handleCompleteClick}>完了</Button>

@@ -16,12 +16,15 @@ const FormEdit = ({todo, onEdit}) => {
  const handleSubmit = async (e) => {
 
     try{
+       const confirm = window.confirm('編集してもよろしいでしょうか?')
+       if(confirm){
         const todoData = {
             title,
             kind
         };
         await Update(id, todoData);
         onEdit();
+      }
     }
     catch(error){
         console.log(error)

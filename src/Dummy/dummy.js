@@ -2,22 +2,27 @@ const TodoListDummy = [
 {
     title: '今後のフロントエンド開発で必須となるReact v18の機能を丁寧に解説する',
     kind: 'udemy' ,
+    url:   'http://localhost:3000/list',
     remaining: 6   
 },{
     title: 'Rubyマスターコース',
     kind: 'udemy' ,
+    url:   'http://localhost:3000/list',
     remaining: 28   
 },{
     title: 'javascriptマスターコース',
     kind: 'udemy' ,
+    url:   'http://localhost:3000/list',
     remaining: 12  
 },{
     title: "関口paizaAランク",
     kind: 'paiza',
+    url:   'http://localhost:3000/list',
     remaining: 15
 },{
     title: "HTML+CSSコーディング教科書",
     kind: 'study',
+    url:   'http://localhost:3000/list',
     remaining: 19
 },{
     title: "基本情報の参考書1週",

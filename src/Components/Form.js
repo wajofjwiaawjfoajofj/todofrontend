@@ -14,6 +14,7 @@ const Form = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
+ 
 
     console.log(title,kind,url,day)
     console.log(typeof day)
