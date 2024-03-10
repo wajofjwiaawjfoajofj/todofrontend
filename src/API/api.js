@@ -73,3 +73,14 @@ export const getComplete = async (todoId) => {
         }
 }
 
+//編集用のAPI
+export const Update = async (todoId, todoData) => {
+    try{
+        const res = await axios.put(`${URL_API}/todomodels/${todoId}`, todoData);
+        return res.data;
+    }
+    catch(error){
+        console.log(error);
+        throw error
+    }
+}

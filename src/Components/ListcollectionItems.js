@@ -1,9 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Button } from '@mui/material';
 import { Delete } from '../API/api';
 import { Complete } from '../API/api';
+import FormEdit from './FormEdit';
+
 
 const ListcollectionItems = ({todo, onDelete,onComplete }) => {
+
+
+    const [isEdit,setIsEdit] = useState(false);
+
+    const handleEditClick = () => {
+        setIsEdit(true)
+    }
+
+    const handleEditCanCel = () => {
+        setIsEdit(false)
+    }
+
+
 
     const handleDeleteClick = async () => {
         try{
@@ -31,16 +46,17 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
   return (
     <div>
         <>
-            <li>
+        {!isEdit ?(<li>
              <p>{todo.title}</p>
              <p>{todo.url}</p>
             <div className='inner'>
             {`残り${todo.remaining !== undefined ? todo.remaining : "未定"}日`}
             <Button variant='outlined'  onClick={handleCompleteClick}>完了</Button>
             <Button variant='outlined'  color='warning' onClick={handleDeleteClick}>削除</Button>
-            <Button variant='outlined'  color='info'>編集</Button>
+            <Button variant='outlined'  color='info' onClick={handleEditClick}>編集</Button>
              </div>
-             </li>      
+             </li>    )
+             : <FormEdit  todo={todo}  onEdit={handleEditCanCel} />}  
       </>
     </div>
   )
