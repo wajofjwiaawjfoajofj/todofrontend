@@ -1,20 +1,19 @@
 .formEditWrapper{
     width: 100%;
-    height: 600px;
     border: 1px solid black;
     background-color: aliceblue;
     display: flex;
-    justify-content: center;
+
 }
 
 .form{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     margin-bottom: 40px;
     padding: 30px;
     padding-top: 0px;
+    margin-top: 0px;
 }
 
 .formEditTitle{

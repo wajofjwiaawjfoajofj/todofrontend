@@ -43,7 +43,7 @@ const Form = () => {
       <form onSubmit={handleSubmit}>
         <div className='wrraper'>
         <div className='taskwrappr'>
-         <div  className='labelWrapper'><InputLabel id='title'>Todoの追加</InputLabel><Chip label="必須" color='error' variant="" size="small" /></div>
+         <div  className='labelWrapper'><InputLabel id='title'>Taskの追加</InputLabel><Chip label="必須" color='error' variant="" size="small" /></div>
           <Input
             type='text'
             id='title'
