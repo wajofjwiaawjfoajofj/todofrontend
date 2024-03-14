@@ -54,6 +54,8 @@ const List = () => {
     return (
         <div className='Listmain'>
             <div className='Listwrapper'>
+            <h2>Task List</h2>
+            <p>各カテゴリーともに下チェックボックスにチェックをつけると、確認することができます。</p>
             <Listcollection  todos={todos}   onTodoDelete={handleDelete} onTodoComplete={handleComplete } /> 
             </div>
         </div>

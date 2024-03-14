@@ -12,24 +12,19 @@ const SideList = () => {
     <>
     <ul className='sideBarwrapper'>
      <li className='linkList'>
-     <AddIcon className='muiIcon'  />
-     <Link to="/" className='Link'>Add My Tasks</Link>
+     <Link to="/" className='Link'> <AddIcon className='muiIcon'  /><p className='sidebarContent'>Add My Tasks</p></Link>
      </li>
      <li className='linkList'>
-     <FormatListBulletedIcon className='muiIcon' /> 
-     <Link to="/list" className='Link'>onGoing...</Link>
+     <Link to="/list" className='Link'> <FormatListBulletedIcon className='muiIcon' /> <p className='sidebarContent'>onGoing...</p></Link>
      </li>
      <li className='linkList'>
-     <LibraryAddCheckIcon  className='muiIcon' />
-     <Link to="/complete" className='Link'>Complete</Link>
+     <Link to="/complete" className='Link'> <LibraryAddCheckIcon  className='muiIcon' /><p className='sidebarContent'>Complete</p></Link>
      </li>
      <li className='linkList'>
-     <InfoIcon  className='muiIcon' />
-     <Link to="/about" className='Link'>About this app</Link>
+     <Link to="/about" className='Link'> <InfoIcon  className='muiIcon' /><p className='sidebarContent'>About this app</p></Link>
      </li>
      <li className='linkList'>
-     <CalendarIcon  className='muiIcon' />
-     <Link to="/calendar" className='Link'>Calendar（now create）</Link>
+     <Link to="/calendar" className='Link'><CalendarIcon  className='muiIcon' /><p className='sidebarContent'>Calendar（now create）</p></Link>
      </li>
      </ul>
     </>

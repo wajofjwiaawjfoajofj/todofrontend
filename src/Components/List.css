@@ -38,7 +38,6 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgb(252, 252, 252);
     padding: 30px;
     margin-bottom: 30px;
     width: 100%;
@@ -46,5 +45,20 @@
 
 .checkboxContainer{
     display: flex;
-    flex-direction: row-re;
+    flex-direction: row;
+}
+
+
+@media screen and (min-width:768px){
+   .checkboxContainer{
+    background-color: rgb(252, 252, 252);
+   }
+}
+
+
+@media screen and (max-width:768px){
+    .checkboxContainer{
+        padding: 0;
+        background-color: rgb(246, 246, 246);;
+    }
 }
