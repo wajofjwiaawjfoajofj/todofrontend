@@ -7,13 +7,15 @@ import Calendar from './Components/Calendar';
 import SideList from './Components/SideList';
 import TopBar from './Components/TopBar';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import theme from './theme';
+import { ThemeProvider } from '@emotion/react';
 
 
 
 function App() {
   return (
     <>
+    <ThemeProvider theme={theme}>
     <TopBar className="TopBar"/>
     <Router>
     <div className="wrapper">
@@ -31,6 +33,7 @@ function App() {
     </div>
     </div>
     </Router>
+    </ThemeProvider>
     </>
   );
 }

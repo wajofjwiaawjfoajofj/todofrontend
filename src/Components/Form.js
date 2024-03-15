@@ -4,6 +4,7 @@ import { Create } from '../API/api';
 import { useNavigate } from 'react-router-dom';
 import './Form.css';
 
+
 const Form = () => {
   const [title, setTitle] = useState('');
   const [kind, setKind] = useState('');
@@ -108,6 +109,7 @@ const Form = () => {
               variant='contained' 
               className='button'
               size='large'
+              color='primary'
               >
                taskを追加を追加する
              </Button>
