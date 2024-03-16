@@ -19,17 +19,17 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
     todos.sort((m,n) => m.remaining -  n.remaining)
     
     const [showAll,  setShowAll]  =  useState(true)
-    const [showUdemy, setShowUdemy] = useState(true);
-    const [showPaiza, setShowPaiza] = useState(true);
-    const [showStudy, setShowStudy] = useState(true);
-    const [showQualification, setShowQualification] = useState(true);
-    const [showCodetest, setShowCodetest] = useState(true);
-    const [showJob, setShowJob] = useState(true);
-    const [showYoutube, setShowYoutube] = useState(true);
-    const [showDev, setShowDev] = useState(true);
-    const [showHackathon, setShowHackathon] = useState(true);
-    const [shownewqrd, setShowNewqrd] = useState(true);
-    const [showOther, setShowOther] = useState(true);
+    const [showUdemy, setShowUdemy] = useState(false);
+    const [showPaiza, setShowPaiza] = useState(false);
+    const [showStudy, setShowStudy] = useState(false);
+    const [showQualification, setShowQualification] = useState(false);
+    const [showCodetest, setShowCodetest] = useState(false);
+    const [showJob, setShowJob] = useState(false);
+    const [showYoutube, setShowYoutube] = useState(false);
+    const [showDev, setShowDev] = useState(false);
+    const [showHackathon, setShowHackathon] = useState(false);
+    const [shownewqrd, setShowNewqrd] = useState(false);
+    const [showOther, setShowOther] = useState(false);
 
 
 
@@ -82,52 +82,52 @@ const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
       <section>
         <div className='checkboxWrapper'>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showAll}  onChange={() => handleCheckChange('all')} id="all"  />
-        <label id="all">全てのタスク</label>
+        <input type='checkbox' checked={showAll}  onChange={() => handleCheckChange('all')} id="all" className='checkbox'  />
+        <label id="all" className='label labelall'>全てのタスク</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showUdemy}  onChange={() => handleCheckChange('udemy')} id="udemy"  />
-        <label id="udemy">udemy</label>
+        <input type='checkbox' checked={showUdemy}  onChange={() => handleCheckChange('udemy')} id="udemy" className='checkbox'  />
+        <label id="udemy" className='label'>udemy</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showPaiza}  onChange={() => handleCheckChange('paiza')} id="paiza"  />
-        <label id="paiza">Paiza</label>
+        <input type='checkbox' checked={showPaiza}  onChange={() => handleCheckChange('paiza')} id="paiza" className='checkbox'  />
+        <label id="paiza" className='label'>Paiza</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showStudy}  onChange={() => handleCheckChange('study')} id="study"  />
-        <label id="study">参考書</label>
+        <input type='checkbox' checked={showStudy}  onChange={() => handleCheckChange('study')} id="study" className='checkbox'  />
+        <label id="study" className='label'>参考書</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showQualification}  onChange={() => handleCheckChange('qualification')} id="qualification"  />
-        <label id="qualification">資格</label>
+        <input type='checkbox' checked={showQualification}  onChange={() => handleCheckChange('qualification')} id="qualification" className='checkbox'  />
+        <label id="qualification" className='label'>資格</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showCodetest}  onChange={() => handleCheckChange('codetest')} id="codetest"  />
-        <label id="codetest">コーディングテスト</label>
+        <input type='checkbox' checked={showCodetest}  onChange={() => handleCheckChange('codetest')} id="codetest" className='checkbox'  />
+        <label id="codetest" className='label'>コーディングテスト</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showYoutube}  onChange={() => handleCheckChange('youtube')} id="youtube"  />
-        <label id="youtube">Youtube</label>
+        <input type='checkbox' checked={showYoutube}  onChange={() => handleCheckChange('youtube')} id="youtube" className='checkbox'  />
+        <label id="youtube" className='label'>Youtube</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showJob}  onChange={() => handleCheckChange('job')} id="job"  />
-        <label id="job">アルバイト・インターン</label>
+        <input type='checkbox' checked={showJob}  onChange={() => handleCheckChange('job')} id="job" className='checkbox'  />
+        <label id="job" className='label'>アルバイト・インターン</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showHackathon}  onChange={() => handleCheckChange('hackathon')} id="hackathon"  />
-        <label id="hackathon">ハッカソン</label>
+        <input type='checkbox' checked={showHackathon}  onChange={() => handleCheckChange('hackathon')} id="hackathon" className='checkbox'  />
+        <label id="hackathon" className='label'>ハッカソン</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showDev}  onChange={() => handleCheckChange('dev')} id="dev"  />
-        <label id="dev">個人開発</label>
+        <input type='checkbox' checked={showDev}  onChange={() => handleCheckChange('dev')} id="dev" className='checkbox'   />
+        <label id="dev" className='label'>個人開発</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={shownewqrd}  onChange={() => handleCheckChange('newqrd')} id="newqrd"  />
-        <label id="newqrd">就活</label>
+        <input type='checkbox' checked={shownewqrd}  onChange={() => handleCheckChange('newqrd')} id="newqrd" className='checkbox'   />
+        <label id="newqrd" className='label'>就活</label>
         </div>
         <div className='checkboxContainer'>
-        <input type='checkbox' checked={showOther}  onChange={() => handleCheckChange('other')} id="other"  />
-        <label id="other">その他</label>
+        <input type='checkbox' checked={showOther}  onChange={() => handleCheckChange('other')} id="other"  className='checkbox' />
+        <label id="other" className='label'>その他</label>
         </div>
         </div>
 

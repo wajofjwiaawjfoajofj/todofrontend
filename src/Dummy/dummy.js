@@ -2,27 +2,21 @@ const TodoListDummy = [
 {
     title: '今後のフロントエンド開発で必須となるReact v18の機能を丁寧に解説する',
     kind: 'udemy' ,
-    url:   'http://localhost:3000/list',
+    url:   'https://www.udemy.com/course/react_v18/?couponCode=JPLETSLEARNNOW',
     remaining: 6   
 },{
-    title: 'Rubyマスターコース',
+    title: '【2023年最新】【JavaScript＆CSS】ガチで学びたい人のためのWEB開発実践入門（フロントエンド編）',
     kind: 'udemy' ,
-    url:   'http://localhost:3000/list',
-    remaining: 28   
-},{
-    title: 'javascriptマスターコース',
-    kind: 'udemy' ,
-    url:   'http://localhost:3000/list',
+    url:   'https://www.udemy.com/course/front-dev-tutorial/?couponCode=JPLETSLEARNNOW',
     remaining: 12  
 },{
     title: "関口paizaAランク",
     kind: 'paiza',
-    url:   'http://localhost:3000/list',
+    url:   'https://paiza.jp/works/mypage',
     remaining: 1
 },{
     title: "HTML+CSSコーディング教科書",
     kind: 'study',
-    url:   'http://localhost:3000/list',
     remaining: 19
 },{
     title: "基本情報の参考書1週",

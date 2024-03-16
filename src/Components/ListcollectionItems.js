@@ -50,7 +50,7 @@ const ListcollectionItems = ({todo, onDelete,onComplete }) => {
     <div>
         <>
         {!isEdit ?(<li>
-             <p><a href={todo.url}>{todo.title}</a></p>
+             <p><a href={todo.url} target='blank'>{todo.title}</a></p>
             <div className='inner'>
             {`残り${todo.remaining !== undefined ? todo.remaining : "未定"}日`}
             <Button variant='outlined'  onClick={handleCompleteClick}>完了</Button>
