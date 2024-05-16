@@ -3,7 +3,7 @@ import ListcollectionItems from './ListcollectionItems';
 
 const Listcollection = ({ todos, onTodoDelete, onTodoComplete }) => {
 
-  // Sort todos by remaining days
+
   todos.sort((m, n) => m.remaining - n.remaining);
 
   const [filters, setFilters] = useState({
